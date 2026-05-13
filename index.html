@@ -3,15 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Portal Escolar - Excelência e Carinho</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    
 
+    <header>
+        <div class="logo-area">
+            <img src="logo-da-escola.png" alt="Logo da Escola" class="logo">
+            <h1>Educação Brilhante</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#sobre">Nossa Escola</a></li>
+                <li><a href="#calendario">Calendário</a></li>
+                <li><a href="#destaques">Alunos</a></li>
+                <button class="btn-login" onclick="abrirLogin()">Área do Aluno</button>
+            </ul>
+        </nav>
+    </header>
 
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h2>Bem-vindo ao Futuro dos seus Filhos</h2>
+            <p>Um ambiente acolhedor, moderno e focado no desenvolvimento integral.</p>
+        </div>
+    </section>
 
+    <section id="sobre" class="container">
+        <div class="sobre-flex">
+            <div class="sobre-texto">
+                <h2>Nossa História e Missão</h2>
+                <p>Fundada com o propósito de transformar a educação básica, nossa escola combina tradição com métodos inovadores. Acreditamos que cada criança é única e merece um ambiente que estimule a curiosidade e a empatia.</p>
+                <p>Com infraestrutura de ponta e professores qualificados, oferecemos desde o ensino fundamental até o médio, sempre prezando pelo bem-estar emocional e acadêmico dos nossos alunos.</p>
+            </div>
+            <img src="foto-da-escola.jpg" alt="Fachada da Escola" class="img-escola">
+        </div>
+    </section>
 
+    <section id="calendario" class="calendar-section">
+        <h3>Calendário Acadêmico 2024</h3>
+        <div class="calendar-grid">
+            <div class="month">
+                <h4>Maio</h4>
+                <div class="days">
+                    <span>1</span><span>2</span><span>3</span><span class="event">4</span>
+                    <span>5</span><span>6</span><span>7</span><span>8</span>
+                    <span>9</span><span class="event">10</span><span>11</span><span>12</span>
+                    </div>
+                <p class="legenda">* 04/05: Reunião de Pais | 10/05: Feira de Ciências</p>
+            </div>
+        </div>
+    </section>
 
+    <section id="destaques" class="container">
+        <h2 class="titulo-centralizado">Alunos de Destaque</h2>
+        <div class="alunos-grid">
+            <div class="aluno-card">
+                <img src="https://via.placeholder.com/150" alt="Aluno">
+                <h4>Ana Luíza</h4>
+                <p>Medalha de Ouro na Olimpíada de Matemática.</p>
+            </div>
+            <div class="aluno-card">
+                <img src="https://via.placeholder.com/150" alt="Aluno">
+                <h4>Mateus Silva</h4>
+                <p>Destaque em Liderança e Projetos Sociais.</p>
+            </div>
+            <div class="aluno-card">
+                <img src="https://via.placeholder.com/150" alt="Aluno">
+                <h4>Beatriz Soares</h4>
+                <p>Primeiro lugar no concurso de redação estadual.</p>
+            </div>
+        </div>
+    </section>
 
+    <div class="chatbot-container">
+        <div class="chat-window" id="chatWindow">
+            <div class="chat-header">Assistente Virtual</div>
+            <div class="chat-content" id="chatContent">
+                <p>Olá! Como posso te ajudar hoje?</p>
+            </div>
+            <input type="text" placeholder="Digite sua dúvida..." id="chatInput">
+        </div>
+        <button class="chat-toggle" onclick="toggleChat()">💬</button>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Escola Educação Brilhante. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        function toggleChat() {
+            const chat = document.getElementById('chatWindow');
+            chat.style.display = chat.style.display === 'block' ? 'none' : 'block';
+        }
+        function abrirLogin() {
+            alert("Redirecionando para a tela de Login... (Integração de sistema)");
+        }
+    </script>
 </body>
 </html>
